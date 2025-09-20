@@ -42,6 +42,14 @@ export function Header() {
           >
             Gallery
           </Link>
+          <Link
+            href="/preview"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              pathname === "/preview" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Preview
+          </Link>
           {user && (
             <Link
               href="/me/gallery"
@@ -100,6 +108,9 @@ export function Header() {
               <DropdownMenuContent className="w-56" align="end">
                 <DropdownMenuItem asChild>
                   <Link href="/gallery">Gallery</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/preview">Preview</Link>
                 </DropdownMenuItem>
                 {user && (
                   <DropdownMenuItem asChild>
